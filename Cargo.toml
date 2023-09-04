@@ -1,0 +1,13 @@
+[package]
+name = "ocr-prog-proj-ui"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+serde = { version = "1.0.140", features = ["derive"] }
+yew = { version="0.20.0", features = ["csr"] }
+yew-router = "0.17.0"
+
+[workspace]
+members = ["src-tauri"]

@@ -1,0 +1,183 @@
+.margin-1qrem {
+    margin: 0.25rem;
+}
+
+.margin-1hrem {
+    margin: 0.5rem;
+}
+
+.margin-3qrem {
+    margin: 0.75rem;
+}
+
+.margin-1rem {
+    margin: 1rem;
+}
+
+.margin-2rem {
+    margin: 2rem;
+}
+
+.margin-3rem {
+    margin: 3rem;
+}
+
+.margin-4rem {
+    margin: 4rem;
+}
+
+.margin-left-1qrem {
+    margin-left: 0.25rem;
+}
+
+.margin-left-1hrem {
+    margin-left: 0.5rem;
+}
+
+.margin-left-3qrem {
+    margin-left: 0.75rem;
+}
+
+.margin-left-1rem {
+    margin-left: 1rem;
+}
+
+.margin-left-2rem {
+    margin-left: 2rem;
+}
+
+.margin-left-3rem {
+    margin-left: 3rem;
+}
+
+.margin-left-4rem {
+    margin-left: 4rem;
+}
+
+.margin-right-1qrem {
+    margin-right: 0.25rem;
+}
+
+.margin-right-1hrem {
+    margin-right: 0.5rem;
+}
+
+.margin-right-3qrem {
+    margin-right: 0.75rem;
+}
+
+.margin-right-1rem {
+    margin-right: 1rem;
+}
+
+.margin-right-2rem {
+    margin-right: 2rem;
+}
+
+.margin-right-3rem {
+    margin-right: 3rem;
+}
+
+.margin-right-4rem {
+    margin-right: 4rem;
+}
+
+.margin-bottom-1qrem {
+    margin-bottom: 0.25rem;
+}
+
+.margin-bottom-1hrem {
+    margin-bottom: 0.5rem;
+}
+
+.margin-bottom-3qrem {
+    margin-bottom: 0.75rem;
+}
+
+.margin-bottom-1rem {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-2rem {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-3rem {
+    margin-bottom: 3rem;
+}
+
+.margin-bottom-4rem {
+    margin-bottom: 4rem;
+}
+
+.margin-top-1qrem {
+    margin-top: 0.25rem;
+}
+
+.margin-top-1hrem {
+    margin-top: 0.5rem;
+}
+
+.margin-top-3qrem {
+    margin-top: 0.75rem;
+}
+
+.margin-top-1rem {
+    margin-top: 1rem;
+}
+
+.margin-top-2rem {
+    margin-top: 2rem;
+}
+
+.margin-top-3rem {
+    margin-top: 3rem;
+}
+
+.margin-top-4rem {
+    margin-top: 4rem;
+}
+
+.color-fg {
+    color: var(--fg);
+}
+
+.background-color-fg {
+    background-color: var(--fg);
+}
+
+.color-bg {
+    color: var(--bg);
+}
+
+.background-color-bg {
+    background-color: var(--bg);
+}
+
+.color-accent {
+    color: var(--accent);
+}
+
+.background-color-bg {
+    background-color: var(--accent);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
