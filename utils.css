@@ -166,6 +166,18 @@
     display: flex;
 }
 
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -180,4 +192,12 @@
 
 .flex-row {
     flex-direction: row;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
 }

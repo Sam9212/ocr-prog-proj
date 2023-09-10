@@ -1,21 +1,19 @@
-pub mod home;
+pub mod dashboard;
 pub mod login;
 
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use home::Home;
+use dashboard::Dashboard;
 use login::Login;
-
-use crate::components::header::Header;
 
 #[derive(Routable, PartialEq, Clone)]
 pub enum AppRoute {
     #[at("/")]
-    Home,
-
-    #[at("/login")]
     Login,
+
+    #[at("/dash")]
+    Dashboard,
 
     #[not_found]
     #[at("/404")]
@@ -24,8 +22,8 @@ pub enum AppRoute {
 
 pub fn switch(route: AppRoute) -> Html {
     match route {
-        AppRoute::Home => html! {<Home />},
-        AppRoute::Login => html! {<Login />},
+        AppRoute::Login => html! { <Login /> },
+        AppRoute::Dashboard => html! { <Dashboard /> },
         AppRoute::NotFound => html! { "Page Not Found" },
     }
 }
@@ -34,7 +32,6 @@ pub fn switch(route: AppRoute) -> Html {
 pub fn app() -> Html {
     html! {
         <HashRouter>
-            <Header />
             <Switch<AppRoute> render={switch} />
         </HashRouter>
     }
