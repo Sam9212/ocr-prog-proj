@@ -36,6 +36,7 @@ h1 {
   color: transparent;
   background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 50%, var(--accent) 100%);
   background-size: 200% 200%;
+  -webkit-background-clip: text;
   background-clip: text;
   animation: 4s linear infinite gradient-scroll;
 }
@@ -86,6 +87,7 @@ input:focus {
 .main-input {
   padding: 1rem;
   background-color: var(--bg);
+  border: none;
   margin: 4px;
 }
 
