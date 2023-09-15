@@ -16,6 +16,9 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "dialog": {
+        "message": true
       }
     },
     "bundle": {
@@ -33,7 +36,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.github.sam9212",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -60,10 +63,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 800,
+        "height": 600,
         "resizable": false,
         "title": "Times Tables Blitz",
-        "width": 1200
+        "width": 800
       }
     ]
   }

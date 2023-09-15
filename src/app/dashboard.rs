@@ -1,5 +1,7 @@
 use yew::prelude::*;
 
+use crate::components::info_bar::AccountInfoBar;
+
 #[derive(PartialEq, Properties)]
 pub struct DashboardProps {}
 

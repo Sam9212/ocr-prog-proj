@@ -3,11 +3,123 @@
   font-size: 16px;
   font-weight: 400;
 
-  background-color: #0f0f0f;
-  color: #f6f6f6;
+  --bg: #252525;
+  --bg-dark: #000000;
+  --fg: #ffffff;
+  --ok: #4ac135;
+  --err: #c42828;
+
+  --accent: #0c75a6;
+  --accent-light: #19a4c0;
+
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradient-scroll {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 200%;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 50%, var(--accent) 100%);
+  background-size: 200% 200%;
+  background-clip: text;
+  animation: 4s linear infinite gradient-scroll;
+}
+
+.main-btn-border {
+  background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 50%, var(--accent) 100%);
+  animation: 4s linear infinite gradient-scroll;
+  transition: 0.2s all ease-in; 
+  background-size: 200% 200%;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.main-btn {
+  background-color: transparent;
+  transition: 0.2s all ease-in; 
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 4px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.main-btn-border:hover {
+  box-shadow: inset 200px 200px transparent;
+}
+
+.main-btn-border:hover > .main-btn {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-check {
+  display: none !important;
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-input {
+  padding: 1rem;
+  background-color: var(--bg);
+  margin: 4px;
+}
+
+.main-input-border {
+  position: relative;
+  background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 50%, var(--accent) 100%);
+  background-size: 200% 200%;
+  animation: 4s linear infinite gradient-scroll;
+}
+
+.main-input-label {
+  position: absolute;
+  margin: 1.25rem;
+  color: #7f7f7f;
+  background-color: var(--bg);
+  cursor: text;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+}
+
+.main-input-label:has(+ .main-input:focus) {
+  transform: translate(-10%, -150%);
+  color: var(--accent);
+}
+
+.main-input-label:has(+ .main-input[empty="false"]) {
+  transform: translate(-10%, -150%);
+  color: var(--accent);
+}
+
+.main-input-label:has(+ .main-input[valid="false"]) {
+  color: var(--err);
+}
+
+.main-input-border:has(> .main-input[valid="false"]) {
+  background-color: var(--err);
+  background-image: none;
 }
