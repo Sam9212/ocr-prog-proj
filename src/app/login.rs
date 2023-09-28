@@ -1,6 +1,8 @@
+use database_lib::database::{DatabaseConnection, bson::User};
 use wasm_bindgen::JsCast;
-use web_sys::{HtmlInputElement, Window};
+use web_sys::HtmlInputElement;
 use yew::prelude::*;
+use math_lib::{MathExpr, MathComponent::{Add, Sub, Mul, Power, Bracket, Num}};
 
 use crate::components::inputs::{
     GradientBorderButton,
@@ -22,26 +24,32 @@ pub fn login() -> Html {
     let username = use_state(|| String::new());
     let password = use_state(|| String::new());
 
-    let onchange_username = move |e: Event| {
-        let value = e.target()
-            .and_then(|t| t.dyn_into::<HtmlInputElement>().ok())
-            .expect("Input Element Failed to cast")
-            .value();
+    let onchange_username = {
+        let username = username.clone();
+        move |e: Event| {
+            let value = e.target()
+                .and_then(|t| t.dyn_into::<HtmlInputElement>().ok())
+                .expect("Input Element Failed to cast")
+                .value();
 
-        username.set(value);
+            username.set(value);
+        }
     };
 
-    let onchange_password = move |e: Event| {
-        let value = e.target()
-            .and_then(|t| t.dyn_into::<HtmlInputElement>().ok())
-            .expect("Input Element Failed to cast")
-            .value();
+    let onchange_password = {
+        let password = password.clone();
+        move |e: Event| {
+            let value = e.target()
+                .and_then(|t| t.dyn_into::<HtmlInputElement>().ok())
+                .expect("Input Element Failed to cast")
+                .value();
 
-        password.set(value);
+            password.set(value);
+        }
     };
 
-    let onclick = |_e: MouseEvent| {
-
+    let onclick = |_| {
+        
     };
 
     html! {

@@ -87,6 +87,7 @@ input:focus {
   padding: 1rem;
   background-color: var(--bg);
   margin: 4px;
+  color: var(--fg);
 }
 
 .main-input-border {

@@ -10,6 +10,12 @@ wasm-bindgen = "0.2.87"
 web-sys = { version = "0.3.64", features = ["Window"] }
 yew = { version = "0.20.0", features = ["csr"] }
 yew-router = "0.17.0"
+database_lib = { path = "database_lib" }
+math_lib = { path = "math_lib" }
+tauri-sys = { git = "https://github.com/JonasKruckenberg/tauri-sys", features = ["tauri"] }
+futures = "0.3.28"
+wasm-logger = "0.2.0"
+log = "0.4.20"
 
 [workspace]
-members = ["src-tauri"]
+members = ["src-tauri", "database_lib", "math_lib"]
